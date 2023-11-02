@@ -3,23 +3,23 @@
 
 /**
  * binary_tree_depth - measure depth of node in binary tree
- * @tree: pointer to node to measure depth
+ * @node: pointer to node to measure depth
  *
  * Return: depth of node, or 0 if tree is NULL
  */
 
-size_t binary_tree_depth(const binary_tree_t *tree)
+size_t binary_tree_depth(const binary_tree_t *node)
 {
-	if (tree == NULL)
+	 size_t depth = 0;
+
+	if (node == NULL)
 	{
-		return (0);
+		return (depth);
 	}
 
-	size_t depth = 0;
-
-	while (tree->parent != NULL)
+	while (node->parent != NULL)
 	{
-		tree = tree->parent;
+		node = node->parent;
 		depth++;
 	}
 
